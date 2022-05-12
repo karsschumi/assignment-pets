@@ -6,3 +6,8 @@ resource "aws_ecr_repository" "ecrrepo" {
     scan_on_push = var.image_scan_on_push
   }
 }
+
+resource "aws_cloudwatch_log_group" "cwloggroup" {
+  name = format("%s-%s",var.resource_name_prefix,"log-group")
+  retention_in_days = 7
+}
