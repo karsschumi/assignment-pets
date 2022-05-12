@@ -1,3 +1,12 @@
+terraform {
+  backend "s3" {
+    bucket = "source-tfstate-bucket"
+    key    = "pets"
+    region = "us-east-1"
+  }
+}
+
+
 resource "aws_ecr_repository" "ecrrepo" {
   name                 = format("%s-%s",var.resource_name_prefix,"repo")
   image_tag_mutability = var.tag_mutability
