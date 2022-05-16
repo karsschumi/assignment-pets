@@ -9,6 +9,8 @@ This will create the following resource
 * Nat Gateways
 * Elastic Container Registry
 
+This solution also uses terraform s3 bucket to store state files. This file contains a custom JSON format that records a mapping from the Terraform resources in your templates to the representation of those resources in the real world.
+
 &nbsp;
 
 # Built with
